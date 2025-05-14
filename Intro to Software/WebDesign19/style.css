@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overscroll-behavior: none;
+  font-family: rubik;
+}
+.body {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.bg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+}
+.bg video {
+  width: 100%;
+}
+.bgGradient {
+  background: linear-gradient(to top, #000, #00000000);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  /* background-color: #000; */
+  background: linear-gradient(to top, #000, #00000000);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  color: #fff;
+}
+.titlePage {
+  background-color: #00000000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 15px;
+  flex-direction: column;
+  filter:drop-shadow(0 0 10px #000);
+}
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.sub {
+    text-align: left;
+    width:955px;
+    font-style: italic;
+    color:#ffffff90;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
