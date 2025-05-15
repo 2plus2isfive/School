@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +6,8 @@
 }
 body {
   background-color: #000;
-  color: #fff;
-  font-family: monospace;
+  color: #dedede;
+  font-family: Rubik;
   font-size: 24px;
 }
 .parent {
@@ -29,13 +30,44 @@ body {
 }
 .option {
   width: fit-content;
-  border-left: solid 3px #ffffff10;
-  padding: 2px 0 2px 8px;
+  border-left: solid 3px #202020;
+  padding: 5px 0 5px 8px;
   transition: 0.1s;
   margin: 0 0 0 2px;
+  text-decoration: none;
 }
 .option:hover {
-  border-left: solid 5px #ffffff20;
+  border-left: solid 5px #303030;
+}
+a {
+  text-decoration: none;
+}
+.content {
+  font-size: 18px;
+  text-align: justify;
+}
+embed {
+  width: 100%;
+  height: 50px;
+}
+.profile {
+  background: #101010;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  width: 100%;
+  transform: translate(-30px, 0);
+}
+.pfp {
+  width: 72px;
+  height: 72px;
+}
+.name {
+  letter-spacing: 1px;
+}
+.profile a {
+  color: #dedede;
 }
 /* .marquee {
   width: 100%;

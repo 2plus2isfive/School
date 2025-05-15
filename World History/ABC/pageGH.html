@@ -21,7 +21,7 @@
         <div class="page">
           <div class="spacer"></div>
           <p class="subtitle"><span class="letter">H</span>itler</p>
-          <img src="img/hitler.avif" class="featured" />
+          <img src="img/hitler.avif" class="featured" id="hitler-img" />
           <p class="content">
             Hitler is known for being the leader of Nazi Germany until he killed himself on April 30, 1945, since he was worried
             about being captured by the Soviets and didn't want to be punished for his actions.
@@ -35,5 +35,12 @@
       <a>Zoom the page to a comfortable reading scale (Ctrl +/-)</a>
       <a href="pageIJ.html">NEXT</a>
     </div>
+    <script>
+      // 1/50 chance to swap image
+      if (Math.random() < 1/50) {
+        const img = document.getElementById('hitler-img');
+        if (img) img.src = 'img/sabrinacarpenter.jpg';
+      }
+    </script>
   </body>
 </html>
