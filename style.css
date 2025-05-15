@@ -29,13 +29,13 @@ body {
 }
 .option {
   width: fit-content;
-  border-left: solid 0px #00000000;
-  padding: 0 0 0 0;
+  border-left: solid 3px #ffffff10;
+  padding: 2px 0 2px 8px;
   transition: 0.1s;
+  margin: 0 0 0 2px;
 }
 .option:hover {
-  padding: 0 0 0 5px;
-  border-left: solid 5px #cacaca;
+  border-left: solid 5px #ffffff20;
 }
 /* .marquee {
   width: 100%;

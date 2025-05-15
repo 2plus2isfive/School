@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        transition: filter 0s;
+        background-color: #000;
+      }
+      .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://images.nationalgeographic.org/image/upload/v1638892496/EducationHub/photos/pyramid-of-the-sun.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -1;
+        transition: filter 0s;
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+      .parent {
+        background-color: #ffffff00;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .main {
+        width: 80%;
+        background-color: #00000080;
+        border-radius: 2vw 2vw 0 0;
+        backdrop-filter: blur(2vw);
+        color: #eeeeee;
+        justify-content: center;
+      }
+      .banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #ffffff;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+      .bannerOption {
+        padding: 1%;
+        font-family: Cinzel, Times;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        transition: 0.3s;
+        cursor: pointer;
+        font-size: 1.5vw;
+      }
+      .bannerOption:hover {
+        color: #505050;
+        background-color: #dedede;
+      }
+      .renameLater {
+        background-color: #ff00ff00;
+        width: 100%;
+        aspect-ratio: 16 / 6.7;
+        display: flex;
+      }
+      .mainTitle {
+        font-weight: 500;
+        font-size: 2.8vw;
+        font-family: cinzel;
+        text-align: center;
+      }
+      .mainText {
+        padding: 1% 10%;
+        text-align: justify;
+        font-size: 1.2vw;
+      }
+      .faqContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .question {
+        font-size: 1.2vw;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        font-family: Montserrat;
+        min-height: 3em; /* Ensure uniform height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        word-wrap: break-word; /* Ensure text wraps within the container */
+      }
+      .miniContainer {
+        display: flex;
+        flex-direction: column;
+        background-color: #00000050;
+        border-radius: 1vw;
+        margin: 1%;
+        padding: 1%;
+        width: 25%;
+        cursor: default;
+        transition: 0.3s;
+        min-height: 10em; /* Ensure uniform height */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      }
+      .answer {
+        font-size: 1vw;
+        text-align: justify;
+        padding: 1%;
+      }
+      .footer {
+        background-color: #151515;
+        color: #fff;
+        text-align: center;
+        padding: 1% 0;
+        width: 100%;
+        bottom: 0;
+        font-size: 1.2vw;
+      }
+      .popup {
+        width: 70%;
+        font-weight: 600;
+        font-family: cinzel;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #000000aa;
+        backdrop-filter: blur(1vw);
+        color: #fff;
+        padding: 1%;
+        border-radius: 1vw;
+        text-align: center;
+        z-index: 100;
+        display: none;
+        cursor: pointer; /* Add cursor pointer to indicate clickable area */
+        user-select: none;
+        font-size: 1.8vw;
+        transition: opacity 0.2s ease, transform 0.5s ease; /* Add transition for fade out and zoom out */
+      }
+      .popup.hidden {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9); /* Apply zoom out effect */
+      }
+    </style>
+    <title>Aztec Field Trip</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="content">
+      <!--<div class="banner">
+        <a href="#top" class="bannerOption">Home</a>
+        <a href="#info" class="bannerOption">Information</a>
+        <a href="#FAQ" class="bannerOption">FAQ</a>
+        <a class="bannerOption">PLCHLDR</a>
+        <a class="bannerOption">PLCHLDR</a>
+        <a class="bannerOption">PLCHLDR</a>
+      </div>-->
+      <div class="renameLater">
+        <p>&nbsp;</p>
+      </div>
+      <div class="parent">
+        <div class="main">
+          <p class="mainTitle" id="info">Aztec Civilization School Tour</p>
+          <p class="mainText">
+            Step back in time and immerse your students in the rich history of
+            the Aztec Civilization with our exclusive educational tours. Our
+            expertly guided tours provide a unique opportunity for students to
+            explore the ancient ruins, learn about the Aztec culture, and
+            understand the significance of their contributions to modern
+            society. This hands-on experience is designed to complement
+            classroom learning and ignite a passion for history in young minds.
+            Our tours are meticulously planned to ensure a safe, engaging, and
+            educational experience for all participants. From the majestic
+            pyramids to the intricate stone carvings, students will witness the
+            grandeur of the Aztec Empire firsthand. Our knowledgeable guides
+            will share fascinating stories and insights, making history come
+            alive. Join us for an unforgettable journey that will leave your
+            students inspired and enriched.
+          </p>
+          <br />
+          <p class="mainTitle" id="FAQ">Frequently Asked Questions</p>
+
+          <div class="faqContainer">
+            <div class="miniContainer">
+              <p class="question">Do you offer school field trips?</p>
+              <p class="answer">
+                Yes, we offer school field trips. Depending on the time of year
+                or other factors, the cost varies between $20 to $30 per
+                student. We strive to provide an affordable and educational
+                experience for all students.
+              </p>
+            </div>
+
+            <div class="miniContainer">
+              <p class="question">When are tours available?</p>
+              <p class="answer">
+                Tours are available at any time of year, however, it is
+                recommended to go during the spring and summer seasons. These
+                seasons offer the best weather conditions for exploring the
+                ancient ruins and enjoying the outdoor activities.
+              </p>
+            </div>
+
+            <div class="miniContainer">
+              <p class="question">How long does the tour last?</p>
+              <p class="answer">
+                Our tours usually last one day, however there is a two day and a
+                three day tour option for more in depth tours. The extended
+                tours provide a more comprehensive experience, allowing students
+                to delve deeper into the history and culture of the Aztec
+                Civilization.
+              </p>
+            </div>
+
+            <div class="miniContainer">
+              <p class="question">What should students bring on the tour?</p>
+              <p class="answer">
+                Students should bring comfortable walking shoes, a hat,
+                sunscreen, a water bottle, and a notebook for taking notes. It
+                is also advisable to bring a light jacket or sweater, as the
+                weather can be unpredictable.
+              </p>
+            </div>
+
+            <div class="miniContainer">
+              <p class="question">Are meals provided during the tour?</p>
+              <p class="answer">
+                Yes, meals are provided during the tour. We offer a variety of
+                options to accommodate different dietary needs. Our meal plans
+                include vegetarian, vegan, and gluten-free options to ensure
+                that all students can enjoy a nutritious meal.
+              </p>
+            </div>
+
+            <div class="miniContainer">
+              <p class="question">Is there a discount for large groups?</p>
+              <p class="answer">
+                Yes, we offer discounts for large groups. Please contact us for
+                more information on group rates and discounts. We aim to make
+                our tours accessible to as many students as possible, and we are
+                happy to work with schools to accommodate their budgetary
+                constraints.
+              </p>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2025 Aztec Tours Inc. All rights reserved.</p>
+      <p>Contact us: info@aztectours.com | +1 (234) 567-8910</p>
+    </div>
+    <div class="popup" id="popup">
+      <p>
+        For the best experience, please view this site on a 16:9 display.<br /><span
+          style="color: #dedede; opacity: 0.8"
+        >
+          (click to dismiss)</span
+        >
+      </p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const background = document.querySelector(".background");
+        const popup = document.getElementById("popup");
+
+        // Show the popup
+        popup.style.display = "block";
+
+        window.addEventListener("scroll", function () {
+          const scrollY = window.scrollY;
+          const blurValue = Math.min(scrollY / 100, 10); // Adjust the divisor to control the blur rate
+          const saturationValue = Math.max(100 - scrollY / 5, 0); // Adjust the divisor to control the saturation rate
+          const scaleValue = 1 + Math.min(scrollY / 5000, 0.1); // Adjust the divisor to control the zoom rate
+          const dimValue = Math.min(scrollY / 2000, 0.2); // Adjust the divisor to control the dim rate
+          background.style.filter = `blur(${blurValue}px) saturate(${saturationValue}%) brightness(${
+            1 - dimValue
+          })`;
+          background.style.transform = `scale(${scaleValue})`; // Removed rotation effect
+        });
+
+        // Add click event to dismiss the popup with fade out and zoom out effect
+        popup.addEventListener("click", function () {
+          popup.classList.add("hidden");
+          setTimeout(() => {
+            popup.style.display = "none";
+          }, 500); // Match the duration of the transition
+        });
+      });
+    </script>
+  </body>
+</html>
