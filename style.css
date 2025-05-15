@@ -4,9 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
 body {
-  background-color: #000;
-  color: #dedede;
+  background-color: #050505;
+  color: #cacaca;
   font-family: Rubik;
   font-size: 24px;
 }
@@ -15,12 +22,12 @@ body {
   justify-content: center;
 }
 .main {
-  width: 600px;
+  width: 400px;
   max-width: 100%;
   min-height: 100vh;
   max-height: fit-content;
-  background-color: #ffffff10;
-  padding: 15px;
+  background-color: #101010;
+  position: relative;
 }
 :link {
   color: #5090bb;
@@ -29,8 +36,11 @@ body {
   color: #5090bb;
 }
 .option {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  text-transform: lowercase;
   width: fit-content;
-  border-left: solid 3px #202020;
+  border-left: solid 3px #252525;
   padding: 5px 0 5px 8px;
   transition: 0.1s;
   margin: 0 0 0 2px;
@@ -50,18 +60,21 @@ embed {
   width: 100%;
   height: 50px;
 }
-.profile {
-  background: #101010;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 5px;
+.class {
+  transform: scale(1.03);
+  background-color: #181818;
+  padding: 10px;
   width: 100%;
-  transform: translate(-30px, 0);
+  border: solid 5px #101010;
 }
 .pfp {
   width: 72px;
   height: 72px;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  color: #999;
+  font-size: 32px;
 }
 .name {
   letter-spacing: 1px;
